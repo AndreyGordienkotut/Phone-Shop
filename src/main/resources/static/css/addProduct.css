@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@media (min-width: 1401px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2em;
+        align-self: center;
+    }
+    .container {
+        margin-top: 12vh; /* Adjusted to avoid header overlap */
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        padding: 8px;
+        border: 2px solid #af82ed;
+        font-size: 1em;
+    }
+
+    .form-control:hover {
+        border-color: #7747ba;
+    }
+
+    .btn-primary {
+        background-color: #af82ed;
+        border: none;
+        color: #000;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .btn-primary:hover {
+        background-color: #7747ba;
+    }
+
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 10px;
+    }
+    .list-group{
+        max-height: 300px; /* Adjust the height as needed */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 1201px) and (max-width: 1401px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+        align-self: center;
+    }
+    .container {
+        margin-top: 12vh; /* Adjusted to avoid header overlap */
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        padding: 8px;
+        border: 2px solid #af82ed;
+        font-size: 1em;
+    }
+
+    .form-control:hover {
+        border-color: #7747ba;
+    }
+
+    .btn-primary {
+        background-color: #af82ed;
+        border: none;
+        color: #000;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #7747ba;
+    }
+
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 10px;
+
+    }
+    .list-group{
+        max-height: 300px; /* Adjust the height as needed */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 30px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 769px) and (max-width: 1201px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+        align-self: center;
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 1.2em;
+        color: #333;
+    }
+    .form-control {
+        border-radius: 5px;
+        padding: 8px;
+        border: 2px solid #af82ed;
+        font-size: 1em;
+    }
+    .form-control:hover {
+        border-color: #7747ba;
+    }
+    .btn-primary {
+        background-color: #af82ed;
+        border: none;
+        color: #000;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .btn-primary:hover {
+        background-color: #7747ba;
+    }
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 10px;
+    }
+    .list-group{
+        max-height: 300px; /* Adjust the height as needed */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+        margin-top: 1.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.8em, 1.5vw, 1.2em);
+    }
+}
+@media (min-width: 631px) and (max-width: 769px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1em;
+        align-self: center;
+    }
+    .add-product-header {
+        margin-top: 15vh;
+    }
+    h2 {
+
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 1.2em;
+        color: #333;
+    }
+    .form-control {
+        border-radius: 5px;
+        padding: 8px;
+        border: 2px solid #af82ed;
+        font-size: 1em;
+    }
+    .form-control:hover {
+        border-color: #7747ba;
+    }
+    .btn-primary {
+        background-color: #af82ed;
+        border: none;
+        color: #000;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .btn-primary:hover {
+        background-color: #7747ba;
+    }
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom:10px;
+    }
+    .list-group{
+        max-height: 300px; /* Adjust the height as needed */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+        margin-bottom:15vh;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+        margin-top: 0.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+}
+@media (max-width: 631px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kurale";
+        background-color: #aec0eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+    .header-link {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 0.6em;
+        align-self: center;
+    }
+    .add-product-header {
+        margin-top: 15vh;
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 1.2em;
+        color: #333;
+    }
+    .form-control {
+        border-radius: 5px;
+        padding: 8px;
+        border: 2px solid #af82ed;
+        font-size: 1em;
+    }
+    .form-control:hover {
+        border-color: #7747ba;
+    }
+    .btn-primary {
+        background-color: #af82ed;
+        border: none;
+        color: #000;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .btn-primary:hover {
+        background-color: #7747ba;
+    }
+    .list-group-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        margin-bottom: 10px;
+    }
+    .list-group{
+        max-height: 300px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom:15vh;
+    }
+    footer {
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .footer-text {
+        text-align: center;
+        margin: 0;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+        margin-top: 0.5vh;
+    }
+    .footer-text-second {
+        flex-grow: 1;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        font-size: 1.2em;
+        margin-top: 0.5vh;
+        font-size: clamp(0.6em, 1.5vw, 0.8em);
+    }
+}

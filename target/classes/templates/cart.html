@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styleMain.css}"/>
+</head>
+<body>
+<header>
+  <nav>
+    <a th:href="@{'/' + ${userId} + '/Main'}" class="header-link">Home</a>
+    <a th:href="@{'/' + ${userId} + '/orders'}" class="header-link">Orders</a>
+    <a th:href="@{'/' + ${userId} + '/profile'}" class="header-link">Profile</a>
+    <a href="/logout" class="header-link">Logout</a>
+  </nav>
+</header>
+<div class="container">
+  <h1>Shopping Cart</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="orderPhone : ${orderPhones}">
+      <td th:text="${orderPhone.phone.name}">Product Name</td>
+      <td th:text="${orderPhone.count}">1</td>
+      <td th:text="${orderPhone.price}">0.00</td>
+      <td>
+        <form th:action="@{/cart/remove/{orderId}/{phoneId}(orderId=${orderPhone.order.id}, phoneId=${orderPhone.phone.id})}" method="post">
+          <button type="submit" class="btn btn-danger">Remove</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <form th:action="@{'/' + ${userId} + '/order/checkout'}" method="post">
+    <button type="submit" class="btn btn-primary">Checkout</button>
+  </form>
+  <form th:action="@{/cart/clear}" method="post">
+    <button type="submit" class="btn btn-secondary">Clear Cart</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cook Master</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styleMain.css}"/>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/logout" class="header-link">Logout</a>
+    <a href="/cart" class="header-link">Cart</a>
+    <a th:href="@{'/' + ${userId} + '/orders'}" class="header-link">Orders</a>
+    <a th:href="@{'/' + ${userId} + '/profile'}" class="header-link">Profile</a>
+  </nav>
+</header>
+<div class="container">
+  <h1>Product List</h1>
+  <div class="row">
+    <div class="col-md-4" th:each="phone : ${phones}">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title" th:text="${phone.name}">Product Name</h5>
+          <p class="card-text">
+            <strong>Price:</strong> <span th:text="${phone.price}">0</span><br>
+            <strong>Color:</strong> <span th:text="${phone.color}">Color</span><br>
+            <strong>Description:</strong> <span th:text="${phone.descr}">Description</span><br>
+            <strong>Amount Available:</strong> <span th:text="${phone.amount}">0</span>
+          </p>
+          <form th:action="@{/cart/add/{phoneId}(phoneId=${phone.id})}" method="post">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+
+</footer>
+</body>
+</html>

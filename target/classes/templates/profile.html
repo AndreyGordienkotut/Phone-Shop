@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styleMain.css}"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a th:href="@{'/' + ${userId} + '/Main'}" class="header-link">Home</a>
+        <a href="/cart" class="header-link">Cart</a>
+        <a th:href="@{'/' + ${userId} + '/orders'}" class="header-link">Orders</a>
+        <a href="/logout" class="header-link">Logout</a>
+    </nav>
+
+</header>
+<div class="user-info">
+    <h2>User Information</h2>
+    <p>Login: <span th:text="${user.login}">default login</span></p>
+    <p>Name: <span th:text="${customer.name}">default name</span></p>
+    <p>Email: <span th:text="${customer.email}">default email</span></p>
+    <p>Phone: <span th:text="${customer.phone}">default phone</span></p>
+    <p>Address: <span th:text="${customer.address}">default address</span></p>
+</div>
+<footer>
+
+</footer>
+</body>
+</html>
